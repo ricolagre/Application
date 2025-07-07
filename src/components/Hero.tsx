@@ -1,5 +1,5 @@
 import im1 from '../assets/im1.png'
-const Hero = () => {
+function Hero  ()  {
   return (
     <section className="grid md:grid-cols-2 gap-6 p-8 bg-pink-50 items-center">
       <div>

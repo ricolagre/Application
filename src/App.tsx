@@ -1,16 +1,25 @@
-// src/App.tsx
 import React from 'react';
-import MainLayout from './layouts/MainLayout';
+import Header from './components/Header';
 import Hero from './components/Hero';
-import Features from './components/Features';
 
-const App = () => {
+import Features from './components/Features';
+import Footer from './components/Footer';
+type Props = {
+  children: React.ReactNode; // ✅ Typage correct
+};
+
+const MainLayout = ({ children }: Props) => {
   return (
-    <MainLayout>
-      <Hero />
-      <Features />
-    </MainLayout>
+    <>
+      <Header />
+      <main>{children}</main>
+      <Hero/>
+     
+      <Features/>
+      <Footer/>
+    </>
   );
 };
 
-export default App;
+export default MainLayout;
+
